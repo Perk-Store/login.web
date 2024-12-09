@@ -11,7 +11,10 @@
         <h2>Login</h2>
         <form id="loginForm">
             <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" required>
+                <span id="togglePassword" class="eye-icon">👁️</span>
+            </div>
             <button type="submit">Login</button>
         </form>
     </div>

@@ -12,11 +12,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 420px; /* Keeps the container width at 420px */
+    width: 420px;
 }
 
 input[type="text"], input[type="password"] {
-    width: 48%; /* Make each input take up half the width of the container */
+    width: 48%; /* Half width of container */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -34,10 +34,11 @@ input[type="text"], input[type="password"] {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px; /* Make the emoji fit the button */
     color: #007bff;
-    padding: 0;
-    margin-left: 10px;
+    padding: 2px 5px; /* Minimal padding to keep it small */
+    margin-left: 10px; /* Space between the input and button */
+    line-height: 1; /* Ensure the button is vertically aligned */
 }
 
 #togglePassword:hover {

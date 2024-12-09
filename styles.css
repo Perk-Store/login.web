@@ -25,7 +25,7 @@ input[type="text"] {
 }
 
 input[type="password"] {
-    width: calc(100% - 40px); /* Password box remains slightly larger */
+    width: calc(100% - 40px); /* Password box slightly larger */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;

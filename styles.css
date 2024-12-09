@@ -16,7 +16,7 @@ body {
 }
 
 input[type="text"] {
-    width: calc(50% - 20px); /* Make the username box a little shorter */
+    width: calc(100% - 70px); /* Username box is 30px shorter than password */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -25,7 +25,7 @@ input[type="text"] {
 }
 
 input[type="password"] {
-    width: calc(100% - 40px); /* Ensure the password box takes up most of the space */
+    width: calc(100% - 40px); /* Password box slightly larger to compensate */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;

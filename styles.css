@@ -12,11 +12,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 420px; /* Keeps the container width at 420px */
+    width: 420px;
 }
 
 input[type="text"], input[type="password"] {
-    width: calc(100% - 40px); /* Ensures the input boxes take up most of the space */
+    width: calc(100% - 40px); /* Ensures input boxes take up space, accounting for button */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -26,19 +26,23 @@ input[type="text"], input[type="password"] {
 
 .password-wrapper {
     display: flex;
-    align-items: center; /* Ensures the button is vertically aligned with the input */
+    align-items: center; /* Vertically center the button with the input */
     width: 100%;
 }
 
 #togglePassword {
     background: none;
-    border: none;
+    border: 1px solid #ddd; /* Border to make it visible */
     cursor: pointer;
-    font-size: 20px; /* Slightly larger than emoji for visibility */
+    font-size: 20px; /* Size of the emoji */
     color: #007bff;
-    padding: 0; /* No extra padding */
+    width: 30px; /* Set button to a small square */
+    height: 30px; /* Set button to a small square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 10px; /* Space between input and button */
-    height: auto; /* Ensures the height is minimal */
+    border-radius: 4px; /* Rounded corners */
 }
 
 #togglePassword:hover {

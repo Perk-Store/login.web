@@ -23,25 +23,23 @@ input[type="text"], input[type="password"] {
 }
 
 .password-wrapper {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
 }
 
 #togglePassword {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    background: none;
+    border: none;
     cursor: pointer;
-    padding: 5px 10px;
-    border: 1px solid #007bff;
-    background-color: #fff;
+    font-size: 18px;
     color: #007bff;
-    border-radius: 4px;
+    padding: 0;
+    margin-left: 10px;
 }
 
 #togglePassword:hover {
-    background-color: #f0f0f0;
+    text-decoration: underline;
 }
 
 button {

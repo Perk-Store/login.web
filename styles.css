@@ -15,8 +15,17 @@ body {
     width: 420px;
 }
 
-input[type="text"], input[type="password"] {
-    width: calc(100% - 40px); /* Ensures input boxes take up space, accounting for button */
+input[type="text"] {
+    width: calc(50% - 20px); /* Make the username box a little shorter */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="password"] {
+    width: calc(100% - 40px); /* Ensure the password box takes up most of the space */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -36,8 +45,8 @@ input[type="text"], input[type="password"] {
     cursor: pointer;
     font-size: 20px; /* Size of the emoji */
     color: #007bff;
-    width: 30px; /* Set button to a small square */
-    height: 30px; /* Set button to a small square */
+    width: 30px; /* Small square around the emoji */
+    height: 30px; /* Small square around the emoji */
     display: flex;
     justify-content: center;
     align-items: center;

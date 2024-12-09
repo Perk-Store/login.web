@@ -30,13 +30,13 @@ h2 {
 }
 
 .login-link {
-    color: #6f42c1; /* Use the purple color from the image */
+    color: #6f42c1; /* Purple color for the link */
     text-decoration: none;
     font-weight: bold;
 }
 
 .login-link:hover {
-    text-decoration: none; /* Remove underline on hover */
+    text-decoration: none; /* No underline on hover */
 }
 
 form {
@@ -57,7 +57,7 @@ input[type="password"] {
 
 button {
     padding: 10px;
-    background: #007bff; /* Adjusted to the right blue color */
+    background: #007bff; /* Correct blue color */
     color: white;
     border: none;
     border-radius: 4px;

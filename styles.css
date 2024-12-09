@@ -12,15 +12,16 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Adjust the width here */
+    width: 420px; /* Wider container to accommodate wider input fields */
 }
 
 input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding for a bit more height */
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 16px; /* Larger text size for better readability */
 }
 
 .password-wrapper {
@@ -45,7 +46,7 @@ input[type="text"], input[type="password"] {
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #007bff;
     color: white;
     border: none;

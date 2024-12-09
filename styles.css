@@ -32,7 +32,15 @@ input[type="text"], input[type="password"] {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 4px;
+}
+
+#togglePassword:hover {
+    background-color: #f0f0f0;
 }
 
 button {

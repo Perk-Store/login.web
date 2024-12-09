@@ -37,5 +37,5 @@ togglePasswordButton.addEventListener('click', function() {
     passwordField.type = type;
 
     // Toggle the button text
-    this.textContent = type === 'password' ? 'Show' : 'Hide';
+    this.textContent = type === 'password' ? '👁️' : '🙈';
 });

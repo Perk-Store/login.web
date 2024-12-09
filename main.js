@@ -1,14 +1,13 @@
-const togglePasswordLogin = document.getElementById("togglePassword");
-const passwordInputLogin = document.getElementById("password");
-const loginForm = document.getElementById("loginForm");
-
-togglePasswordLogin.addEventListener("click", function () {
-    const type = passwordInputLogin.type === "password" ? "text" : "password";
-    passwordInputLogin.type = type;
+// Handle password visibility toggle
+document.getElementById("togglePassword")?.addEventListener("click", function () {
+    const passwordInput = document.getElementById("password");
+    const type = passwordInput.type === "password" ? "text" : "password";
+    passwordInput.type = type;
     this.textContent = type === "password" ? "👁️" : "🚫";
 });
 
-loginForm.addEventListener("submit", function (event) {
+// Handle form submission for Login
+document.getElementById("loginForm")?.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const username = document.getElementById("username").value;
@@ -38,5 +37,6 @@ loginForm.addEventListener("submit", function (event) {
     .then(data => console.log('Success:', data))
     .catch((error) => console.error('Error:', error));
 
-    loginForm.reset();
+    // Reset the form after submission
+    document.getElementById("loginForm").reset();
 });

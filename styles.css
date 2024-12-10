@@ -62,8 +62,8 @@ input[type="email"] { /* Add email input to match the others */
     cursor: pointer;
 }
 
-/* Button styling */
-button.login-btn {
+/* Button styling for login/signup (ensures it spans the same width) */
+button[type="submit"].login-btn {
     background-color: grey; /* Login button grey */
     color: white;
     font-size: 1.2em;
@@ -78,7 +78,7 @@ button.login-btn {
 }
 
 /* Button hover effect */
-button.login-btn:hover {
+button[type="submit"].login-btn:hover {
     background-color: darkgrey; /* Slightly darker grey on hover */
 }
 

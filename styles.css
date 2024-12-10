@@ -14,7 +14,7 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #111; /* Darker background for the nav */
+    background-color: black; /* Matches the dark background */
     padding: 10px 0;
     width: 100%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -26,17 +26,22 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    margin: 0 15px; /* Adjust spacing between buttons */
+    font-size: 1em;
+    padding: 10px 20px; /* Adds space inside each button */
+    border: 1px solid white; /* White border for each button */
+    border-radius: 4px; /* Rounded corners for buttons */
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: grey;
-    border-color: white;
+    background-color: white; /* Invert colors on hover */
+    color: black; /* Text turns black on hover */
+}
+
+/* Space below the nav bar */
+body {
+    margin-top: 60px; /* Adjusts margin to account for the fixed nav bar */
 }
 
 /* Main Content Container */

@@ -5,14 +5,46 @@ body {
     background-color: black; /* Background black */
     color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-/* Container for the login box */
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #111; /* Darker background for the nav */
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: grey;
+    border-color: white;
+}
+
+/* Main Content Container */
 .container {
+    margin-top: 80px; /* Adds space for the navigation bar */
     text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
 
 /* Title styling */
@@ -22,7 +54,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Login box styling */
+/* Login/Signup Box Styling */
 .login-box {
     background-color: grey; /* Grey background for the box */
     padding: 30px;
@@ -34,14 +66,15 @@ body {
 
 /* Form inputs */
 input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
+    box-sizing: border-box;
 }
 
 /* Emoji button styling */
@@ -62,9 +95,9 @@ input[type="password"] {
     cursor: pointer;
 }
 
-/* Button styling */
+/* Button Styling */
 button.login-btn {
-    background-color: grey; /* Login/Sign Up button grey */
+    background-color: grey; /* Login button grey */
     color: white;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -72,17 +105,17 @@ button.login-btn {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    width: 100%;
-    border-radius: 4px;
+    width: 100%; /* Matches input width */
     border: 2px solid white;
+    transition: background-color 0.3s ease;
 }
 
-/* Button hover effect */
+/* Button Hover Effect */
 button.login-btn:hover {
     background-color: darkgrey; /* Slightly darker grey on hover */
 }
 
-/* Links */
+/* Links Styling */
 a {
     color: lightblue;
     text-decoration: none;
@@ -92,19 +125,17 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Input container for password toggle button */
+/* Input Container for Password Toggle Button */
 .input-container {
     position: relative;
 }
 
-/* Styling for the Home link */
-.home-link {
-    color: lightblue;
-    text-decoration: none;
-    font-size: 1em;
-    margin-top: 10px;
-}
-
-.home-link:hover {
-    text-decoration: underline;
+/* Snow Container */
+#snow-container {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 80px); /* Starts below the navigation bar */
+    bottom: 0;
+    z-index: -1; /* Keeps it behind the login/signup content */
+    overflow: hidden;
 }

@@ -10,94 +10,145 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: black; /* Matches the dark background */
-    padding: 10px 0;
-    width: 100%;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+/* Navbar styles */
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
 }
 
-nav a {
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-link {
     color: white;
     text-decoration: none;
-    margin: 0 15px; /* Adjust spacing between buttons */
-    font-size: 1em;
-    padding: 10px 20px; /* Adds space inside each button */
-    border: 1px solid white; /* White border for each button */
-    border-radius: 4px; /* Rounded corners for buttons */
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-nav a:hover {
-    background-color: white; /* Invert colors on hover */
-    color: black; /* Text turns black on hover */
+.nav-link.active,
+.nav-link:hover {
+    background-color: #555;
+    border-color: #888;
 }
 
-/* Space below the nav bar */
-body {
-    margin-top: 60px; /* Adjusts margin to account for the fixed nav bar */
+/* Grey line under the navbar */
+.navbar-line {
+    border: 1px solid #ccc; /* Light grey border under the navbar */
+    margin: 0;
 }
 
-/* Main Content Container */
-.container {
-    margin-top: 80px; /* Adds space for the navigation bar */
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-}
-
-/* Title styling */
-.brand {
-    font-size: 2.5em;
-    color: white; /* PERK title color white */
-    margin-bottom: 20px;
-}
-
-/* Login/Signup Box Styling */
-.login-box {
-    background-color: grey; /* Grey background for the box */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    max-width: 400px;
-}
-
-/* Form inputs */
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    box-sizing: border-box;
-}
-
-/* Emoji button styling */
-#togglePassword {
+/* Snowfall container */
+#snow {
     position: absolute;
-    right: var(--right-position, 10px);
-    top: var(--top-position, 50%);
-    transform: translateY(-50%);
-    background: white; /* Emoji button stays white */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
-    width: var(--width, 30px);
-    height: var(--height, 30px);
+    top: 50px;  /* Adjust this as necessary to place below the navbar */
+    width: 100%;
+    height: 100vh;  /* This ensures the snow covers the full screen */
+}
+
+/* General Body and Container Styles */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+/* Login box styles */
+.login-box {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.brand {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input container styles */
+.input-container {
+    margin: 15px 0;
+    position: relative; /* Required for the password visibility toggle */
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border-color: #888;
+    outline: none;
+}
+
+/* Login button styles */
+.login-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #444;
+}
+
+/* Toggle password visibility button */
+.toggle-password {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Sign up / login text styles */
+p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Home link styles */
+.home-link {
+    color: white;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
 }
 
 /* Button Styling */
@@ -130,9 +181,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Input Container for Password Toggle Button */
-.input-container {
-    position: relative;
+/* Styling for the grey line */
+.navbar-line {
+    border: 1px solid #ccc; /* Light grey border under the navbar */
+    margin: 0;
 }
 
 /* Snow Container */

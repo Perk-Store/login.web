@@ -34,9 +34,9 @@ body {
 
 /* Form inputs */
 input[type="text"],
-input[type="password"],
-input[type="email"] { /* Add email input to match the others */
-    width: 100%; /* Ensure they take up the full width */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -62,9 +62,9 @@ input[type="email"] { /* Add email input to match the others */
     cursor: pointer;
 }
 
-/* Button styling for login/signup (ensures it spans the same width) */
-button[type="submit"].login-btn {
-    background-color: grey; /* Login button grey */
+/* Button styling */
+button.login-btn {
+    background-color: grey; /* Login/Sign Up button grey */
     color: white;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -72,13 +72,13 @@ button[type="submit"].login-btn {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    width: 100%; /* Full width */
+    width: 100%;
     border-radius: 4px;
     border: 2px solid white;
 }
 
 /* Button hover effect */
-button[type="submit"].login-btn:hover {
+button.login-btn:hover {
     background-color: darkgrey; /* Slightly darker grey on hover */
 }
 
@@ -95,4 +95,16 @@ a:hover {
 /* Input container for password toggle button */
 .input-container {
     position: relative;
+}
+
+/* Styling for the Home link */
+.home-link {
+    color: lightblue;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.home-link:hover {
+    text-decoration: underline;
 }

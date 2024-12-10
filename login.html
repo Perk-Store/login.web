@@ -7,42 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="login.html">Login</a>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="login.html" class="nav-link active">Login</a>
+        </div>
     </nav>
+    <hr class="navbar-line"> <!-- Grey line under navbar -->
 
-    <!-- Snow Effect -->
-    <div id="snow">
-        <div class="container">
-            <div class="login-box">
-                <div class="brand">PERK</div>
+    <!-- Snowfall container -->
+    <div id="snow"></div> <!-- Snow falling container below the navbar -->
 
-                <form id="loginForm">
-                    <div class="input-container">
-                        <input type="text" id="username" placeholder="Username" required>
-                    </div>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="login-box">
+            <div class="brand">PERK</div>
 
-                    <div class="input-container">
-                        <input type="password" id="password" placeholder="Password" required>
-                        <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
-                            👁️
-                        </button>
-                    </div>
+            <form id="loginForm">
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
 
-                    <button type="submit" class="login-btn">Login</button>
-                </form>
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button id="togglePassword" class="toggle-password">👁️</button>
+                </div>
 
-                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-                <p><a href="index.html" class="home-link">Home</a></p>
-            </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            <!-- Home link below -->
+            <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>
 
+    <!-- Link to Login JavaScript -->
+    <script src="login.js"></script>
+    <!-- Link to main.js for snow effect -->
     <script src="main.js"></script>
 </body>
 </html>

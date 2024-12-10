@@ -3,15 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Perk</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            border-bottom: 2px solid grey;
+            padding: 10px 0;
+        }
+
+        .navbar .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .navbar .buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar .buttons a:hover {
+            background-color: grey;
+            color: black;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content h1 {
+            font-size: 5rem;
+            margin: 0;
+        }
+    </style>
 </head>
-
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="login.html">Sign up</a></p>
+<body>
+    <div class="navbar">
+        <div class="buttons">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="login.html">Login</a>
+        </div>
     </div>
-
-    <script src="main.js"></script>
+    <div class="main-content">
+        <h1>PERK</h1>
+    </div>
 </body>
 </html>

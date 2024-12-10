@@ -7,21 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="#" class="nav-link">About</a>
-            <a href="#" class="nav-link">Services</a>
-            <a href="login.html" class="nav-link active">Login</a>
-        </div>
-    </nav>
-    <hr class="navbar-line"> <!-- Grey line under navbar -->
 
-    <!-- Snowfall container -->
-    <div id="snow"></div> <!-- Snow falling container below the navbar -->
+    <!-- Snow Container -->
+    <div id="snow"></div>
 
-    <!-- Main Content -->
     <div class="container">
         <div class="login-box">
             <div class="brand">PERK</div>
@@ -33,7 +22,7 @@
 
                 <div class="input-container">
                     <input type="password" id="password" placeholder="Password" required>
-                    <button id="togglePassword" class="toggle-password">👁️</button>
+                    <button id="togglePassword" class="toggle-password" type="button">👁️</button>
                 </div>
 
                 <button type="submit" class="login-btn">Login</button>
@@ -45,9 +34,7 @@
         </div>
     </div>
 
-    <!-- Link to Login JavaScript -->
+    <!-- Link to login.js -->
     <script src="login.js"></script>
-    <!-- Link to main.js for snow effect -->
-    <script src="main.js"></script>
 </body>
 </html>

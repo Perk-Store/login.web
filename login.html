@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Perk</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="brand">PERK</h1> <!-- Title in all caps -->
-        <div class="login-box">
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Username">
 
-                <label for="password">Password</label>
+    <div class="container">
+        <div class="login-box">
+            <div class="brand">PERK</div>
+
+            <form id="loginForm">
                 <div class="input-container">
-                    <input type="password" id="password" placeholder="Password">
-                    <!-- Emoji button for toggling password visibility -->
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Password" required>
                     <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
                         👁️
                     </button>
@@ -26,9 +26,13 @@
 
                 <button type="submit" class="login-btn">Login</button>
             </form>
+
             <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            <!-- Home link below -->
+            <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>
+
     <script src="login.js"></script>
 </body>
 </html>

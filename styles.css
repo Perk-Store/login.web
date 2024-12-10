@@ -44,8 +44,8 @@ input {
 
 #togglePassword {
     position: absolute;
-    right: 15px;
-    top: 55%;
+    right: 5px;
+    top: 45%;
     transform: translateY(-50%);
     background: white;
     border: 1px solid #ccc;

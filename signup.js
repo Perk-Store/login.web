@@ -9,11 +9,12 @@ document.getElementById('togglePassword').addEventListener('click', function(eve
     // Toggle the input type between 'password' and 'text'
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        this.textContent = '👁️';  // Show the eye emoji when password is visible
     } else {
         passwordInput.type = 'password';
-        this.textContent = '❌';  // Show the red cross when password is hidden
     }
+
+    // Toggle the emoji (optional, if you want the emoji to change)
+    this.textContent = (passwordInput.type === 'password') ? '👁️' : '🚫'; // Change emoji based on visibility
 });
 
 // Handle the form submission to send the signup details to Discord (add webhook logic here)

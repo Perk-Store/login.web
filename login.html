@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Perk</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav>
         <a href="index.html">Home</a>
@@ -16,34 +16,33 @@
         <a href="login.html">Login</a>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="login-box">
-            <div class="brand">PERK</div>
+    <!-- Snow Effect -->
+    <div id="snow">
+        <div class="container">
+            <div class="login-box">
+                <div class="brand">PERK</div>
 
-            <form id="loginForm">
-                <div class="input-container">
-                    <input type="text" id="username" placeholder="Username" required>
-                </div>
+                <form id="loginForm">
+                    <div class="input-container">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
 
-                <div class="input-container">
-                    <input type="password" id="password" placeholder="Password" required>
-                    <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
-                        👁️
-                    </button>
-                </div>
+                    <div class="input-container">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
+                            👁️
+                        </button>
+                    </div>
 
-                <button type="submit" class="login-btn">Login</button>
-            </form>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
 
-            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-            <p><a href="index.html" class="home-link">Home</a></p>
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                <p><a href="index.html" class="home-link">Home</a></p>
+            </div>
         </div>
     </div>
 
-    <!-- Snow Effect Below -->
-    <div id="snow-container"></div> <!-- Snow only appears here -->
-
-    <script src="login.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

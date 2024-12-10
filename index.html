@@ -65,12 +65,14 @@
 
         /* Snow effect container */
         #snow {
-            position: absolute;
-            top: 50px; /* Position it just below the gray line */
+            position: fixed;
+            top: 0;
             left: 0;
             width: 100%;
-            height: calc(100vh - 50px); /* Take up the remaining height below the navbar */
-            z-index: 1; /* Place snow particles behind the content */
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 1;
         }
 
         /* Form and input styling */

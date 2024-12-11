@@ -8,18 +8,28 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <div class="login-box">
             <div class="brand">PERK</div>
 
             <form id="loginForm">
                 <div class="input-container">
-                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="text" id="username" placeholder="Username" required autofocus autocomplete="off">
                 </div>
 
                 <div class="input-container">
-                    <input type="password" id="password" placeholder="Password" required>
-                    <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
+                    <input type="password" id="password" placeholder="Password" required autocomplete="off">
+                    <button type="button" id="togglePassword" aria-label="Toggle Password Visibility">
                         👁️
                     </button>
                 </div>
@@ -28,7 +38,6 @@
             </form>
 
             <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-            <!-- Home link below -->
             <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>

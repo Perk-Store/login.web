@@ -2,62 +2,81 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: #080808;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column; /* Ensure the navbar stays at the top */
+    flex-direction: column;
+    overflow: hidden; /* Ensure no overflow of snow particles */
 }
 
 /* Navigation Bar */
 .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: grey;
+    background-color: black;
+    border-bottom: 2px solid grey;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.navbar .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar .buttons a {
+    text-decoration: none;
+    color: white;
     padding: 10px 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .buttons a:hover {
+    background-color: grey;
+    color: black;
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.main-content h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: white;
+}
+
+/* Snow effect container (optional) */
+#snow {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-/* Container for the login box */
-.container {
-    text-align: center;
-    margin-top: 80px; /* Space below the fixed navbar */
-}
-
-/* Title styling */
-.brand {
-    font-size: 2.5em;
-    color: white;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
 }
 
 /* Login box styling */
+.container {
+    position: relative;
+    top: 100px; /* Space below the navbar */
+}
+
 .login-box {
     background-color: grey;
     padding: 30px;
@@ -66,6 +85,7 @@ body {
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 /* Form inputs */
@@ -77,7 +97,7 @@ input[type="email"] {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1em;
+    font-size: 14px;
     box-sizing: border-box;
 }
 

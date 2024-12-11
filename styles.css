@@ -51,11 +51,6 @@ body {
     justify-content: center;
 }
 
-.main-content h1 {
-    font-size: 5rem;
-    margin: 0;
-}
-
 /* Login box styling */
 .container {
     position: relative;
@@ -71,6 +66,13 @@ body {
     max-width: 400px;
     box-sizing: border-box;
     text-align: center;
+}
+
+/* Brand (smaller PERK text inside the login box) */
+.brand {
+    font-size: 2em; /* Smaller font size */
+    color: white;
+    margin-bottom: 20px; /* Space between brand and form */
 }
 
 /* Form inputs */
@@ -141,7 +143,7 @@ a:hover {
     }
 
     .brand {
-        font-size: 2em;
+        font-size: 1.5em; /* Adjust brand font size on small screens */
     }
 
     input[type="text"], input[type="password"] {

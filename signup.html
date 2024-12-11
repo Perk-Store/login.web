@@ -1,54 +1,44 @@
-<!-- SIGNUP PAGE (signup.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Perk</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Navbar -->
     <div class="navbar">
-        <div class="navbar-container">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="login.html" class="nav-link">Login</a>
-            <a href="signup.html" class="nav-link active">Sign Up</a>
+        <div class="buttons">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="login.html">Login</a>
         </div>
-        <hr class="navbar-line">
     </div>
 
-    <!-- Snowfall Container -->
-    <div id="snow-container"></div>
+    <!-- Snow effect -->
+    <div id="snow"></div>
 
     <!-- Signup Form -->
     <div class="container">
-        <div class="login-box">
-            <div class="brand">PERK</div>
-
-            <form id="signupForm">
-                <div class="input-container">
-                    <input type="text" id="username" placeholder="Username" required>
-                </div>
-
-                <div class="input-container">
-                    <input type="email" id="email" placeholder="Email (optional)">
-                </div>
-
-                <div class="input-container">
-                    <input type="password" id="password" placeholder="Password" required>
-                    <button id="togglePassword" class="toggle-password">👁️</button>
-                </div>
-
-                <button type="submit" class="login-btn">Sign Up</button>
-            </form>
-
-            <p>Already have an account? <a href="login.html">Login</a></p>
-        </div>
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <div class="input-container">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in here</a>.</p>
     </div>
 
-    <script src="main.js"></script>
     <script src="signup.js"></script>
+    <script src="snow.js"></script>
 </body>
 </html>

@@ -3,35 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign Up - Perk</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="brand">PERK</h1> <!-- Title in all caps -->
-        <div class="login-box">
-            <h2>Sign Up</h2>
-            <form>
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Username">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email">
-
-                <label for="password">Password</label>
-                <div class="input-container">
-                    <input type="password" id="password" placeholder="Password">
-                    <!-- Emoji button for toggling password visibility -->
-                    <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
-                        👁️
-                    </button>
-                </div>
-
-                <button type="submit" class="login-btn">Login</button>
-            </form>
-            <p>Already have an account? <a href="login.html">login</a></p>
+    <div class="navbar">
+        <div class="buttons">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="login.html">Login</a>
         </div>
     </div>
+
+    <!-- Container for the sign-up form -->
+    <div class="container">
+        <div class="login-box">
+            <div class="brand">PERK</div>
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <div class="input-container">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span id="togglePassword">&#128065;</span>
+                </div>
+                <button type="submit" class="login-btn">Sign Up</button>
+            </form>
+
+            <!-- Sign-in link at the bottom of the sign-up box -->
+            <p class="signup-link">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Snow effect container -->
+    <div id="snow"></div>
+
+    <!-- Link to external JavaScript files -->
+    <script src="main.js"></script>
     <script src="signup.js"></script>
 </body>
 </html>

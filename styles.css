@@ -1,4 +1,3 @@
-/* General reset */
 body {
     margin: 0;
     padding: 0;
@@ -9,11 +8,10 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Ensures content is centered vertically */
-    align-items: center; /* Ensures content is centered horizontally */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Navigation Bar */
 .navbar {
     position: absolute;
     top: 0;
@@ -44,19 +42,17 @@ body {
     color: black;
 }
 
-/* Snow effect area (below navbar) */
 #snow {
     position: absolute;
-    top: 60px; /* Starts below the navbar */
+    top: 60px;
     left: 0;
     width: 100%;
-    height: calc(100% - 60px); /* Adjust the height to occupy the space below the navbar */
+    height: calc(100% - 60px);
     z-index: 1;
     pointer-events: none;
     opacity: 1;
 }
 
-/* Main content styling */
 .main-content {
     flex-grow: 1;
     display: flex;
@@ -64,13 +60,12 @@ body {
     justify-content: center;
 }
 
-/* Login box styling */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensure the container takes full viewport height */
-    width: 100%;  /* Ensures the container spans the full width of the screen */
+    height: 100vh;
+    width: 100%;
 }
 
 .login-box {
@@ -79,7 +74,7 @@ body {
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 400px;  /* Limits the max width of the login box */
+    max-width: 400px;
     box-sizing: border-box;
     text-align: center;
     z-index: 10;
@@ -88,19 +83,17 @@ body {
 .error-text {
     font-size: 5em;
     color: white;
-    margin-top: 150px; /* Position the error text lower to avoid overlapping with the nav */
+    margin-top: 150px;
     text-align: center;
     font-weight: bold;
 }
 
-/* Brand (smaller PERK text inside the login box) */
 .brand {
-    font-size: 2em; /* Smaller font size */
+    font-size: 2em;
     color: white;
-    margin-bottom: 20px; /* Space between brand and form */
+    margin-bottom: 20px;
 }
 
-/* Form inputs */
 input[type="text"],
 input[type="password"],
 input[type="email"] {
@@ -113,7 +106,6 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
-/* Emoji button styling */
 #togglePassword {
     position: absolute;
     right: 10px;
@@ -126,7 +118,6 @@ input[type="email"] {
     cursor: pointer;
 }
 
-/* Button styling for login */
 button[type="submit"].login-btn {
     background-color: grey;
     color: white;
@@ -140,12 +131,10 @@ button[type="submit"].login-btn {
     border: 2px solid white;
 }
 
-/* Button hover effect */
 button[type="submit"].login-btn:hover {
     background-color: darkgrey;
 }
 
-/* Links */
 a {
     color: lightblue;
     text-decoration: none;
@@ -155,12 +144,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Input container for password toggle button */
 .input-container {
     position: relative;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 600px) {
     .login-box {
         padding: 20px;
@@ -168,7 +155,7 @@ a:hover {
     }
 
     .brand {
-        font-size: 1.5em; /* Adjust brand font size on small screens */
+        font-size: 1.5em;
     }
 
     input[type="text"], input[type="password"] {

@@ -1,3 +1,4 @@
+<!-- SIGNUP PAGE (signup.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,20 @@
 </head>
 <body>
 
-    <!-- Snow Container -->
-    <div id="snow"></div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="login.html" class="nav-link">Login</a>
+            <a href="signup.html" class="nav-link active">Sign Up</a>
+        </div>
+        <hr class="navbar-line">
+    </div>
 
+    <!-- Snowfall Container -->
+    <div id="snow-container"></div>
+
+    <!-- Signup Form -->
     <div class="container">
         <div class="login-box">
             <div class="brand">PERK</div>
@@ -26,19 +38,17 @@
 
                 <div class="input-container">
                     <input type="password" id="password" placeholder="Password" required>
-                    <button id="togglePassword" class="toggle-password" type="button">👁️</button>
+                    <button id="togglePassword" class="toggle-password">👁️</button>
                 </div>
 
                 <button type="submit" class="login-btn">Sign Up</button>
             </form>
 
             <p>Already have an account? <a href="login.html">Login</a></p>
-            <!-- Home link below -->
-            <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>
 
-    <!-- Link to signup.js -->
+    <script src="main.js"></script>
     <script src="signup.js"></script>
 </body>
 </html>

@@ -9,7 +9,8 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Ensures that the content is centered vertically */
+    justify-content: center; /* Ensures content is centered vertically */
+    align-items: center; /* Ensures content is centered horizontally */
 }
 
 /* Navigation Bar */
@@ -56,7 +57,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  /* Makes sure the container takes full height */
+    height: 100vh; /* Ensure the container takes full viewport height */
+    width: 100%;  /* Ensures the container spans the full width of the screen */
 }
 
 .login-box {

@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
     <div class="navbar">
         <div class="buttons">
             <a href="index.html">Home</a>
@@ -18,30 +16,26 @@
         </div>
     </div>
 
+    <!-- Container for the login form -->
     <div class="container">
         <div class="login-box">
             <div class="brand">PERK</div>
-
-            <form id="loginForm">
+            <form>
+                <input type="text" name="username" placeholder="Username" required>
                 <div class="input-container">
-                    <input type="text" id="username" placeholder="Username" required autofocus autocomplete="off">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span id="togglePassword">&#128065;</span>
                 </div>
-
-                <div class="input-container">
-                    <input type="password" id="password" placeholder="Password" required autocomplete="off">
-                    <button type="button" id="togglePassword" aria-label="Toggle Password Visibility">
-                        👁️
-                    </button>
-                </div>
-
                 <button type="submit" class="login-btn">Login</button>
             </form>
-
-            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-            <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>
 
+    <!-- Snow effect container -->
+    <div id="snow"></div>
+
+    <!-- Link to external JavaScript files -->
+    <script src="main.js"></script>
     <script src="login.js"></script>
 </body>
 </html>

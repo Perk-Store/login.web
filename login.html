@@ -1,3 +1,4 @@
+<!-- LOGIN PAGE (login.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,20 @@
 </head>
 <body>
 
-    <!-- Snow Container -->
-    <div id="snow"></div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="login.html" class="nav-link active">Login</a>
+            <a href="signup.html" class="nav-link">Sign Up</a>
+        </div>
+        <hr class="navbar-line">
+    </div>
 
+    <!-- Snowfall Container -->
+    <div id="snow-container"></div>
+
+    <!-- Login Form -->
     <div class="container">
         <div class="login-box">
             <div class="brand">PERK</div>
@@ -22,19 +34,17 @@
 
                 <div class="input-container">
                     <input type="password" id="password" placeholder="Password" required>
-                    <button id="togglePassword" class="toggle-password" type="button">👁️</button>
+                    <button id="togglePassword" class="toggle-password">👁️</button>
                 </div>
 
                 <button type="submit" class="login-btn">Login</button>
             </form>
 
             <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-            <!-- Home link below -->
-            <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>
 
-    <!-- Link to login.js -->
+    <script src="main.js"></script>
     <script src="login.js"></script>
 </body>
 </html>

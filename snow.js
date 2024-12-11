@@ -13,7 +13,6 @@ function createSnowflake() {
 
 setInterval(createSnowflake, 100);
 
-/* Add snowflake styles */
 const style = document.createElement('style');
 style.innerHTML = `
     .snowflake {

@@ -44,6 +44,18 @@ body {
     color: black;
 }
 
+/* Snow effect area (below navbar) */
+#snow {
+    position: absolute;
+    top: 60px; /* Starts below the navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust the height to occupy the space below the navbar */
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+}
+
 /* Main content styling */
 .main-content {
     flex-grow: 1;

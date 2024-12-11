@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Perk</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="buttons">
-            <a href="index.html">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="login.html" class="active">Login</a>
+
+    <div class="container">
+        <div class="login-box">
+            <div class="brand">PERK</div>
+
+            <form id="loginForm">
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button id="togglePassword" style="--right-position: 10px; --top-position: 50%; --width: 30px; --height: 30px;">
+                        👁️
+                    </button>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            <!-- Home link below -->
+            <p><a href="index.html" class="home-link">Home</a></p>
         </div>
     </div>
 
-    <!-- Snow effect -->
-    <div id="snow"></div>
-
-    <!-- Login Form -->
-    <div class="container">
-        <h1>Login</h1>
-        <form id="login-form">
-            <div class="input-container">
-                <input type="email" id="email" placeholder="Email" required>
-            </div>
-            <div class="input-container">
-                <input type="password" id="password" placeholder="Password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
-    </div>
-
     <script src="login.js"></script>
-    <script src="snow.js"></script>
 </body>
 </html>

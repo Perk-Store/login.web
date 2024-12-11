@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="/pics/favicon.ico">
 
     <style>
-        /* Body and overall layout */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,7 +17,7 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            overflow: hidden; /* Ensure no overflow of snow particles */
+            overflow: hidden;
         }
 
         .navbar {
@@ -29,7 +28,7 @@
             background-color: black;
             border-bottom: 2px solid grey;
             padding: 10px 0;
-            z-index: 10; /* Ensures the navbar is on top of the snow */
+            z-index: 10;
         }
 
         .navbar .buttons {
@@ -57,7 +56,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 20; /* Ensures the content is on top of the snow */
+            z-index: 20;
         }
 
         .main-content h1 {
@@ -66,7 +65,6 @@
             color: white;
         }
 
-        /* Snow effect container */
         #snow {
             position: fixed;
             top: 0;
@@ -78,7 +76,6 @@
             opacity: 1;
         }
 
-        /* Container for the main content */
         .container {
             text-align: center;
             z-index: 20;
@@ -101,7 +98,6 @@
         </div>
     </div>
 
-    <!-- Snow effect container -->
     <div id="snow"></div>
 
     <div class="container">

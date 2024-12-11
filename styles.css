@@ -85,6 +85,14 @@ body {
     z-index: 10;
 }
 
+.error-text {
+    font-size: 5em;
+    color: white;
+    margin-top: 150px; /* Position the error text lower to avoid overlapping with the nav */
+    text-align: center;
+    font-weight: bold;
+}
+
 /* Brand (smaller PERK text inside the login box) */
 .brand {
     font-size: 2em; /* Smaller font size */

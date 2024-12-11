@@ -5,185 +5,65 @@ body {
     background-color: black; /* Background black */
     color: white;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* Navbar styles */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    z-index: 100; /* Ensure it stays on top of other content */
-}
-
-.navbar-container {
-    display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    height: 100vh;
 }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.nav-link.active,
-.nav-link:hover {
-    background-color: #555;
-    border-color: #888;
-}
-
-/* Grey line under the navbar */
-.navbar-line {
-    border: 1px solid #ccc; /* Light grey border under the navbar */
-    margin: 0;
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    z-index: 90; /* Keeps it under the navbar */
-}
-
-/* Snow container */
-#snow-container {
-    position: absolute;
-    top: 50px; /* Starts below the navigation bar */
-    width: 100%;
-    height: calc(100vh - 50px); /* Covers the rest of the screen */
-    bottom: 0;
-    z-index: -1; /* Keeps it behind the login/signup content */
-    overflow: hidden;
-}
-
-/* Snowflake styles */
-.snowflake {
-    position: absolute;
-    top: 0;
-    width: 5px;
-    height: 5px;
-    background: white;
-    border-radius: 50%;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
-
-/* General Body and Container Styles */
+/* Container for the login box */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 50px); /* Full screen minus the navbar */
-    margin-top: 50px; /* Push below navbar */
-}
-
-/* Login box styles */
-.login-box {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
     text-align: center;
-    z-index: 10; /* Above snow */
 }
 
+/* Title styling */
 .brand {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 2.5em;
+    color: white; /* PERK title color white */
     margin-bottom: 20px;
 }
 
-/* Input container styles */
-.input-container {
-    margin: 15px 0;
-    position: relative; /* Required for the password visibility toggle */
-}
-
-input[type="text"], input[type="password"], input[type="email"] {
+/* Login box styling */
+.login-box {
+    background-color: grey; /* Grey background for the box */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
+    max-width: 400px;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"] { /* Add email input to match the others */
+    width: 100%; /* Ensure they take up the full width */
     padding: 10px;
-    background-color: #444;
-    border: 1px solid #555;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-}
-
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
-    border-color: #888;
-    outline: none;
-}
-
-/* Login button styles */
-.login-btn {
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-btn:hover {
-    background-color: #444;
-}
-
-/* Toggle password visibility button */
-.toggle-password {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Sign up / login text styles */
-p {
     margin: 10px 0;
-    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
-a {
-    color: #bbb;
-    text-decoration: none;
+/* Emoji button styling */
+#togglePassword {
+    position: absolute;
+    right: var(--right-position, 10px);
+    top: var(--top-position, 50%);
+    transform: translateY(-50%);
+    background: white; /* Emoji button stays white */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    width: var(--width, 30px);
+    height: var(--height, 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Home link styles */
-.home-link {
-    color: white;
-    text-decoration: none;
-}
-
-.home-link:hover {
-    text-decoration: underline;
-}
-
-/* Button Styling */
-button.login-btn {
+/* Button styling for login/signup (ensures it spans the same width) */
+button[type="submit"].login-btn {
     background-color: grey; /* Login button grey */
     color: white;
     font-size: 1.2em;
@@ -192,12 +72,27 @@ button.login-btn {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    width: 100%; /* Matches input width */
+    width: 100%; /* Full width */
+    border-radius: 4px;
     border: 2px solid white;
-    transition: background-color 0.3s ease;
 }
 
-/* Button Hover Effect */
-button.login-btn:hover {
+/* Button hover effect */
+button[type="submit"].login-btn:hover {
     background-color: darkgrey; /* Slightly darker grey on hover */
+}
+
+/* Links */
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Input container for password toggle button */
+.input-container {
+    position: relative;
 }

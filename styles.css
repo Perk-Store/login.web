@@ -2,84 +2,115 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: black; /* Background black */
+    background-color: black;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column; /* Ensure the navbar stays at the top */
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background-color: grey;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 /* Container for the login box */
 .container {
     text-align: center;
+    margin-top: 80px; /* Space below the fixed navbar */
 }
 
 /* Title styling */
 .brand {
     font-size: 2.5em;
-    color: white; /* PERK title color white */
+    color: white;
     margin-bottom: 20px;
 }
 
 /* Login box styling */
 .login-box {
-    background-color: grey; /* Grey background for the box */
+    background-color: grey;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 400px;
+    box-sizing: border-box;
 }
 
 /* Form inputs */
 input[type="text"],
 input[type="password"],
-input[type="email"] { /* Add email input to match the others */
-    width: 100%; /* Ensure they take up the full width */
-    padding: 10px;
+input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
+    box-sizing: border-box;
 }
 
 /* Emoji button styling */
 #togglePassword {
     position: absolute;
-    right: var(--right-position, 10px);
-    top: var(--top-position, 50%);
+    right: 10px;
+    top: 50%;
     transform: translateY(-50%);
-    background: white; /* Emoji button stays white */
+    background: white;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 5px;
-    width: var(--width, 30px);
-    height: var(--height, 30px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 
-/* Button styling for login/signup (ensures it spans the same width) */
+/* Button styling for login */
 button[type="submit"].login-btn {
-    background-color: grey; /* Login button grey */
+    background-color: grey;
     color: white;
     font-size: 1.2em;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
-    width: 100%; /* Full width */
-    border-radius: 4px;
+    margin-top: 20px;
+    width: 100%;
     border: 2px solid white;
 }
 
 /* Button hover effect */
 button[type="submit"].login-btn:hover {
-    background-color: darkgrey; /* Slightly darker grey on hover */
+    background-color: darkgrey;
 }
 
 /* Links */
@@ -95,4 +126,20 @@ a:hover {
 /* Input container for password toggle button */
 .input-container {
     position: relative;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .login-box {
+        padding: 20px;
+        width: 90%; /* Take up more width on mobile */
+    }
+
+    .brand {
+        font-size: 2em;
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: 10px;
+    }
 }
